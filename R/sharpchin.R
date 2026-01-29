@@ -3,6 +3,8 @@
 ################################################################################
 
 # setup ---
+
+# devtools::install_github("noaa-afsc/tier4tools")
 library(tier4tools)
 library(ggplot2)
 library(patchwork)
@@ -49,11 +51,9 @@ spr_out <- run_spr(
   diagnostics = TRUE
 )
 
-# In 2023 assessment: F35= 0.079, F40= 0.065
 spr_out$F_spr_total
 # F40_total F35_total
 # 0.066     0.080
-# Kristen and I attribute these differences to grid search vs. Excel solver
 
 plot_spr_curves(spr_out)
 

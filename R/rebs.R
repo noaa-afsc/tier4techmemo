@@ -4,6 +4,8 @@
 ################################################################################
 
 # setup ---
+
+# devtools::install_github("noaa-afsc/tier4tools")
 library(tier4tools)
 library(ggplot2)
 library(patchwork)
