@@ -29,7 +29,7 @@ inp <- spr_input(
   ),
   use_plus_group = FALSE
 )
-
+is.list(inp)
 # Check implied schedules (single combined panel)
 inp_plots <- plot_spr_inputs(inp)
 
@@ -54,7 +54,7 @@ spr_out <- run_spr(
 spr_out$F_spr_total
 # F40_total F35_total
 # 0.066     0.080
-
+is.list(spr_out)
 plot_spr_curves(spr_out)
 
 ggsave(filename = file.path(out_dir, "sharpchin_spr.png"),
@@ -90,7 +90,7 @@ sens <- spr_sensitivity(
   spr_targets = c(0.40),
   multispecies_constraint = "none"
 )
-
+is.list(sens)
 range(sens$F40_total)
 
 p1 <- plot_sensitivity_heatmap(

@@ -150,7 +150,7 @@ ggsave(filename = file.path(out_dir, "rebs_decomp_F40_contrib_surv.png"),
        units = "in",
        dpi = 300)
 
-grid_spr_decomp(decomp_plots[c("removed", "removed_prop")], ncol = 1) +
+grid_spr_decomp(plots[c("removed", "removed_prop")], ncol = 1) +
   patchwork::plot_annotation(tag_levels = 'A')
 
 ggsave(filename = file.path(out_dir, "rebs_decomp_F40_removals.png"),
